@@ -17,11 +17,36 @@ export default function Home({posts}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Header />
       <main className={styles.main}>
-        <Header />
-        <section className={styles.excerpt}>Who you are section</section>
+        <section>
+          <div className="brand-hero_background-image"></div>
+          <div className="brand-hero_content">
+            <div className="brand-hero_title">THIS IS A TITLE</div>
+            <div className="brand-hero_image">IMAGE</div>
+          </div>
+        </section>
         <section className={styles.excerpt}>
-          What you have done and/or services you provide
+          <h2>Who you are section</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </section>
+        <section className={styles.excerpt}>
+          <h2>What you have done and/or services you provide</h2>
+          <div className={styles.services}>
+            <p>ICON</p>
+            <h4>SERVICE</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div className={styles.services}>
+            <p>ICON</p>
+            <h4>SERVICE</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div className={styles.services}>
+            <p>ICON</p>
+            <h4>SERVICE</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
         </section>
         <section className={styles.excerpt}>
           Latest sales, testimonials, or other important information
