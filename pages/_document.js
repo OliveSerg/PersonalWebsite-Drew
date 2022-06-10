@@ -9,10 +9,11 @@ class ThemeDocument extends Document {
         <Head>
           <link
             rel="stylesheet"
+            type="text/css"
             href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=optional"
           />
         </Head>
-        <body className="dark:bg-zinc-800">
+        <body className="dark:bg-zinc-800 dark:text-white">
           <Main />
           <NextScript />
         </body>
