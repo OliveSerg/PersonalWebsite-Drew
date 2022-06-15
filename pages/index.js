@@ -4,6 +4,7 @@ import Posts from "../components/posts";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Header from "../components/header";
+import Contact from "../components/contact";
 
 export default function Home({posts}) {
   return (
@@ -18,7 +19,7 @@ export default function Home({posts}) {
       </Head>
 
       <Header />
-      <main className={styles.main}>
+      <main className="relative z-10">
         <section className="flex min-h-[90vh]">
           <div className="brand-hero_background-image"></div>
           <div className="container mx-auto self-center">
@@ -124,7 +125,16 @@ export default function Home({posts}) {
           </div>
         </section>
       </main>
-      <Footer />
+      <div className="">
+        <div className="container mx-auto bg-zinc-800 text-white dark:bg-zinc-100 dark:text-black p-10">
+          <h2 className="text-5xl font-extrabold uppercase col-start-2 col-span-6 text-center">
+            <span className="font-normal italic">Let&apos;s</span> Work Together
+          </h2>
+          <hr className="w-1/3 mx-auto border-y-2 border-red-600 mb-10" />
+          <Contact />
+        </div>
+        <Footer />
+      </div>
     </>
   );
 }

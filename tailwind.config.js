@@ -10,6 +10,9 @@ module.exports = {
       fontFamily: {
         sans: ["Josefin Sans", ...defaultTheme.fontFamily.sans],
       },
+      zIndex: {
+        "-1": "-1",
+      },
     },
   },
   plugins: [],
