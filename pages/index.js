@@ -32,12 +32,12 @@ export default function Home({posts}) {
             </div>
           </div>
         </section>
-        <section id="about" className="relative py-5 mb-40">
+        <section id="about" className="relative p-5 mb-40">
           <div className="h-full w-full absolute left-0 top-0 z-0 bg-zinc-400 skew-y-6"></div>
           <div className="container mx-auto relative z-10">
             <div className="grid grid-rows-3 grid-flow-col gap-4">
               <div className="row-span-3">
-                <h2 className="text-2xl font-bold">Who I Am</h2>
+                <h2 className="text-3xl font-bold">Who I Am</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -50,7 +50,7 @@ export default function Home({posts}) {
                 </p>
               </div>
               <div className="row-span-2 row-start-2">
-                <h2 className="text-2xl font-bold">Who I Am</h2>
+                <h2 className="text-3xl font-bold">Who I Am</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -63,7 +63,7 @@ export default function Home({posts}) {
                 </p>
               </div>
               <div className="row-span-1 row-start-3">
-                <h2 className="text-2xl font-bold">Who I Am</h2>
+                <h2 className="text-3xl font-bold">Who I Am</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -78,30 +78,28 @@ export default function Home({posts}) {
             </div>
           </div>
         </section>
-        <section className="relative py-5 mb-40">
+        <section className="relative p-5 mb-40">
           <div className="container mx-auto">
-            <h2 className="text-2xl font-bold mb-6">
-              What you have done and/or services you provide
-            </h2>
+            <h2 className="text-3xl font-bold mb-6">Services</h2>
             <div className="grid grid-cols-3 gap-4">
-              <div className={styles.services}>
-                <p>ICON</p>
+              <div className="flex flex-col">
+                <i className="fa-solid fa-crow text-7xl text-gold text-center"></i>
                 <h4>SERVICE</h4>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
               </div>
-              <div className={styles.services}>
-                <p>ICON</p>
+              <div className="flex flex-col">
+                <i className="fa-solid fa-crow text-7xl text-gold text-center"></i>
                 <h4>SERVICE</h4>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
               </div>
-              <div className={styles.services}>
-                <p>ICON</p>
+              <div className="flex flex-col">
+                <i className="fa-solid fa-crow text-7xl text-gold text-center"></i>
                 <h4>SERVICE</h4>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -113,28 +111,28 @@ export default function Home({posts}) {
         </section>
         <section className={styles.excerpt}>
           <div className="container mx-auto">
-            <h2 className="text-2xl font-bold">
+            <h2 className="text-3xl font-bold">
               Latest sales, testimonials, or other important information
             </h2>
           </div>
         </section>
         <section className={styles.posts}>
           <div className="container mx-auto">
-            <h2 className="text-2xl font-bold">Posts</h2>
+            <h2 className="text-3xl font-bold">Posts</h2>
             <Posts posts={posts} />
           </div>
         </section>
       </main>
-      <div className="">
+      <section className="p-5">
         <div className="container mx-auto bg-zinc-800 text-white dark:bg-zinc-100 dark:text-black p-10">
           <h2 className="text-5xl font-extrabold uppercase col-start-2 col-span-6 text-center">
             <span className="font-normal italic">Let&apos;s</span> Work Together
           </h2>
-          <hr className="w-1/3 mx-auto border-y-2 border-red-600 mb-10" />
+          <hr className="w-1/3 mx-auto border-y-2 border-red-600 mb-10 mt-3" />
           <Contact />
         </div>
         <Footer />
-      </div>
+      </section>
     </>
   );
 }

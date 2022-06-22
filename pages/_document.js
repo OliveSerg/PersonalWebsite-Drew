@@ -9,8 +9,11 @@ class ThemeDocument extends Document {
         <Head>
           <link
             rel="stylesheet"
-            type="text/css"
-            href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=optional"
+            href="https://fonts.googleapis.com/css?family=Josefin+Sans:wght100,200,300,400,500,600,700,800&display=optional"
+          />
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
           />
         </Head>
         <body className="dark:bg-zinc-800 dark:text-white">
