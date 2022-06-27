@@ -80,11 +80,12 @@ export default function Home({posts}) {
         </section>
         <section className="relative p-5 mb-40">
           <div className="container mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Services</h2>
+            <h2 className="text-3xl font-bold">Services</h2>
+            <hr className="w-24 border-y-2 border-red-600 mb-10 mt-3 ml-2.5" />
             <div className="grid grid-cols-3 gap-4">
               <div className="flex flex-col">
                 <i className="fa-solid fa-crow text-7xl text-gold text-center"></i>
-                <h4>SERVICE</h4>
+                <h4 className="text-xl text-center font-bold">SERVICE</h4>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -92,7 +93,7 @@ export default function Home({posts}) {
               </div>
               <div className="flex flex-col">
                 <i className="fa-solid fa-crow text-7xl text-gold text-center"></i>
-                <h4>SERVICE</h4>
+                <h4 className="text-xl text-center font-bold">SERVICE</h4>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -100,7 +101,7 @@ export default function Home({posts}) {
               </div>
               <div className="flex flex-col">
                 <i className="fa-solid fa-crow text-7xl text-gold text-center"></i>
-                <h4>SERVICE</h4>
+                <h4 className="text-xl text-center font-bold">SERVICE</h4>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -109,16 +110,17 @@ export default function Home({posts}) {
             </div>
           </div>
         </section>
-        <section className={styles.excerpt}>
+        <section className="p-5 mb-40 ">
           <div className="container mx-auto">
-            <h2 className="text-3xl font-bold">
-              Latest sales, testimonials, or other important information
-            </h2>
+            <h2 className="text-3xl font-bold text-center">Testimonials</h2>
+            <hr className="w-32 mx-auto border-y-2 border-red-600 mb-10 mt-3" />
+            <div></div>
           </div>
         </section>
-        <section className={styles.posts}>
+        <section className="bg-zinc-400 p-5 mb-40 ">
           <div className="container mx-auto">
-            <h2 className="text-3xl font-bold">Posts</h2>
+            <h2 className="text-3xl font-bold">Lastest Posts</h2>
+            <hr className="w-32 border-y-2 border-red-600 mb-10 mt-3 ml-2.5" />
             <Posts posts={posts} />
           </div>
         </section>
