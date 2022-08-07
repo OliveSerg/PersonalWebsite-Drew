@@ -1,30 +1,34 @@
 import React, {useState} from "react";
+import {useForm} from "react-hook-form";
 
 export default function Contact() {
-  const [service, setService] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [organization, setOrg] = useState("");
-  const [message, setMessage] = useState("");
+  const {
+    register,
+    handleSubmit,
+    formState: {errors},
+  } = useForm();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const data = {service, name, email, phone, organization, message};
+  const onHandleSubmit = (data) => {
+    console.log(data);
     fetch("/api/contact", {
-      method: "post",
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json;charset=UTF-8",
+      },
       body: JSON.stringify(data),
     });
   };
 
   return (
-    <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
+    <form
+      onSubmit={handleSubmit(onHandleSubmit)}
+      className="grid grid-cols-2 gap-4"
+    >
       <div className="col-span-2 relative z-0 mb-3">
         <select
           id="service"
-          value={service}
-          data-value={service}
-          onChange={(e) => setService(e.target.value)}
+          {...register("service", {required: "Required"})}
           className="block py-1 px-0 w-full bg-transparent appearance-none border-b-2 border-zinc-300 dark:border-gray-600 focus:border-red-600 focus:outline-none focus:ring-0 peer"
         >
           <option value="" selected disabled hidden></option>
@@ -37,13 +41,16 @@ export default function Contact() {
         >
           How Can We Help You?
         </label>
+        <span className="text-red-400 text-sm py-2">
+          {errors.service?.message}
+        </span>
       </div>
       <div className="relative z-0 mb-3">
         <input
           type="text"
           id="name"
           className="block py-1 px-0 w-full bg-transparent appearance-none border-b-2 border-zinc-300 dark:border-gray-600 focus:border-red-600 focus:outline-none focus:ring-0 peer"
-          onChange={(e) => setName(e.target.value)}
+          {...register("name", {required: "Required"})}
           placeholder=" "
         />
         <label
@@ -52,13 +59,22 @@ export default function Contact() {
         >
           Name
         </label>
+        <span className="text-red-400 text-sm py-2">
+          {errors.name?.message}
+        </span>
       </div>
       <div className="relative z-0 mb-3">
         <input
           type="text"
           id="email"
           className="block py-1 px-0 w-full bg-transparent appearance-none border-b-2 border-zinc-300 dark:border-gray-600 focus:border-red-600 focus:outline-none focus:ring-0 peer"
-          onChange={(e) => setEmail(e.target.value)}
+          {...register("email", {
+            required: "Required",
+            pattern: {
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+              message: "Invalid email address",
+            },
+          })}
           placeholder=" "
         />
         <label
@@ -67,13 +83,23 @@ export default function Contact() {
         >
           Email
         </label>
+        <span className="text-red-400 text-sm py-2">
+          {errors.email?.message}
+        </span>
       </div>
       <div className="relative z-0 mb-3">
         <input
           type="tel"
           id="phone"
           className="block py-1 px-0 w-full bg-transparent appearance-none border-b-2 border-zinc-300 dark:border-gray-600 focus:border-red-600 focus:outline-none focus:ring-0 peer"
-          onChange={(e) => setPhone(e.target.value)}
+          {...register("phone", {
+            required: "Required",
+            pattern: {
+              value:
+                /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+              message: "Invalid phone number",
+            },
+          })}
           placeholder=" "
         />
         <label
@@ -82,13 +108,16 @@ export default function Contact() {
         >
           Phone
         </label>
+        <span className="text-red-400 text-sm py-2">
+          {errors.phone?.message}
+        </span>
       </div>
       <div className="relative z-0 mb-3">
         <input
           type="text"
           id="organization"
           className="block py-1 px-0 w-full bg-transparent appearance-none border-b-2 border-zinc-300 dark:border-gray-600 focus:border-red-600 focus:outline-none focus:ring-0 peer"
-          onChange={(e) => setOrg(e.target.value)}
+          {...register("organization")}
           placeholder=" "
         />
         <label
@@ -103,7 +132,7 @@ export default function Contact() {
           type="text"
           id="message"
           className="block min-h-[100px] py-1 px-0 w-full bg-transparent appearance-none border-b-2 border-zinc-300 dark:border-gray-600 focus:border-red-600 focus:outline-none focus:ring-0 peer"
-          onChange={(e) => setMessage(e.target.value)}
+          {...register("message")}
           placeholder=" "
         />
         <label
