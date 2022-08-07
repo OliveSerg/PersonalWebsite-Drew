@@ -78,7 +78,7 @@ export default function Home({posts}) {
             </div>
           </div>
         </section>
-        <section className="relative p-5 mb-40">
+        <section id="services" className="relative p-5 mb-40">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold">Services</h2>
             <hr className="w-24 border-y-2 border-red-600 mb-10 mt-3 ml-2.5" />
@@ -110,14 +110,14 @@ export default function Home({posts}) {
             </div>
           </div>
         </section>
-        <section className="p-5 mb-40 ">
+        <section id="testimonials" className="p-5 mb-40 ">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold text-center">Testimonials</h2>
             <hr className="w-32 mx-auto border-y-2 border-red-600 mb-10 mt-3" />
             <div></div>
           </div>
         </section>
-        <section className="bg-zinc-400 p-5 mb-40 ">
+        <section id="posts" className="bg-zinc-400 p-5 mb-40 ">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold">Lastest Posts</h2>
             <hr className="w-32 border-y-2 border-red-600 mb-10 mt-3 ml-2.5" />
