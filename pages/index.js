@@ -142,7 +142,7 @@ export default function Home({posts}) {
           <div className="absolute -top-[18%] -left-[18%] z-1 w-1/3 h-1/3">
             <Image
               alt="background image"
-              src="/contact-accent.png"
+              src="/contact-accent.svg"
               layout="fill"
               objectFit="contain"
               quality={100}
@@ -152,7 +152,7 @@ export default function Home({posts}) {
           <div className="absolute -bottom-[18%] -right-[18%] z-1 w-1/3 h-1/3 rotate-180">
             <Image
               alt="background image"
-              src="/contact-accent.png"
+              src="/contact-accent.svg"
               layout="fill"
               objectFit="contain"
               quality={100}
