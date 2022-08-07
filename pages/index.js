@@ -125,7 +125,7 @@ export default function Home({posts}) {
           </div>
         </section>
       </main>
-      <section className="p-5">
+      <section id="contact" className="p-5">
         <div className="container mx-auto bg-zinc-800 text-white dark:bg-zinc-100 dark:text-black p-10">
           <h2 className="text-5xl font-extrabold uppercase col-start-2 col-span-6 text-center">
             <span className="font-normal italic">Let&apos;s</span> Work Together
