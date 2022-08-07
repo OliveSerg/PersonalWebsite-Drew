@@ -19,9 +19,17 @@ export default function Home({posts}) {
       </Head>
 
       <Header />
-      <main className="relative z-10">
-        <section className="flex min-h-[90vh]">
-          <div className="brand-hero_background-image"></div>
+      <main className="relative">
+        <section className="flex min-h-[90vh] relative">
+          <div className="absolute w-full h-full top-0 left-0 -z-1">
+            <Image
+              alt="background image"
+              src="/banner-background.svg"
+              layout="fill"
+              objectFit="cover"
+              quality={100}
+            />
+          </div>
           <div className="container mx-auto self-center">
             <div className="grid grid-flow-col grid-cols-12 gap-4">
               <h1 className="text-5xl font-extrabold uppercase col-start-2 col-span-6">
@@ -125,14 +133,33 @@ export default function Home({posts}) {
           </div>
         </section>
       </main>
-      <section id="contact" className="p-5">
-        <div className="container mx-auto bg-zinc-800 text-white dark:bg-zinc-100 dark:text-black p-10">
+      <section id="contact" className="relative p-5 w-full">
+        <div className="max-w-3xl mx-auto bg-zinc-800 text-white z-10 relative dark:bg-zinc-100 dark:text-black p-10">
           <h2 className="text-5xl font-extrabold uppercase col-start-2 col-span-6 text-center">
             <span className="font-normal italic">Let&apos;s</span> Work Together
           </h2>
           <hr className="w-1/3 mx-auto border-y-2 border-red-600 mb-10 mt-3" />
+          <div className="absolute -top-[18%] -left-[18%] z-1 w-1/3 h-1/3">
+            <Image
+              alt="background image"
+              src="/contact-accent.png"
+              layout="fill"
+              objectFit="contain"
+              quality={100}
+            />
+          </div>
           <Contact />
+          <div className="absolute -bottom-[18%] -right-[18%] z-1 w-1/3 h-1/3 rotate-180">
+            <Image
+              alt="background image"
+              src="/contact-accent.png"
+              layout="fill"
+              objectFit="contain"
+              quality={100}
+            />
+          </div>
         </div>
+        <div className="h-4/5 w-full absolute left-0 top-1/2 z-0 bg-zinc-400 -skew-y-6 -translate-y-1/2"></div>
         <Footer />
       </section>
     </>
