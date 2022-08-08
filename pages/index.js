@@ -31,12 +31,22 @@ export default function Home({posts}) {
             />
           </div>
           <div className="container mx-auto self-center">
-            <div className="grid grid-flow-col grid-cols-12 gap-4">
-              <h1 className="text-5xl font-extrabold uppercase col-start-2 col-span-6">
-                <span className="font-normal italic">Lorem ipsum</span> dolor
-                sit amet, consectetur adipiscing eli
-              </h1>
-              <div className="col-span-5">IMAGE</div>
+            <div className="grid grid-flow-col grid-cols-12 gap-4 flex items-center">
+              <div className="col-start-2 col-span-5">
+                <h1 className="text-5xl font-extrabold uppercase">
+                  <span className="font-normal italic">Lorem ipsum</span> dolor
+                  sit amet, consectetur adipiscing eli
+                </h1>
+              </div>
+              <div className="col-span-5 relative">
+                <div className="w-full h-96 -scale-x-[1]">
+                  <Image
+                    src="/gorilla-clipart-black-and-white-5.png"
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
