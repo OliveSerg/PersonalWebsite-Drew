@@ -2,9 +2,9 @@ import Head from "next/head";
 import Footer from "../components/footer";
 import Posts from "../components/posts";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import Header from "../components/header";
 import Contact from "../components/contact";
+import Carousel from "../components/carousel";
 
 export default function Home({posts}) {
   return (
@@ -122,7 +122,9 @@ export default function Home({posts}) {
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold text-center">Testimonials</h2>
             <hr className="w-32 mx-auto border-y-2 border-red-600 mb-10 mt-3" />
-            <div></div>
+            <div className="w-3/4 mx-auto">
+              <Carousel />
+            </div>
           </div>
         </section>
         <section id="posts" className="bg-zinc-400 p-5 mb-40 ">

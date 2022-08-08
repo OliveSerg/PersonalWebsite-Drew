@@ -16,7 +16,7 @@ class ThemeDocument extends Document {
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
           />
         </Head>
-        <body className="dark:bg-zinc-800 dark:text-white">
+        <body className="dark:bg-zinc-800 dark:text-white relative">
           <Main />
           <NextScript />
         </body>
