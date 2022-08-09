@@ -31,14 +31,14 @@ export default function Home({posts}) {
             />
           </div>
           <div className="container mx-auto self-center">
-            <div className="grid grid-flow-col grid-cols-12 gap-4 flex items-center">
-              <div className="col-start-2 col-span-5">
-                <h1 className="text-5xl font-extrabold uppercase">
+            <div className="grid grid-flow-row md:grid-flow-col-dense grid-cols-12 gap-4 flex items-center">
+              <div className="col-start-2 col-span-11 md:col-span-5">
+                <h1 className="text-3xl md:text-5xl font-extrabold uppercase">
                   <span className="font-normal italic">Lorem ipsum</span> dolor
                   sit amet, consectetur adipiscing eli
                 </h1>
               </div>
-              <div className="col-span-5 relative">
+              <div className="col-start-2 md:col-start-6 col-span-11 md-col-span-5 relative">
                 <div className="w-full h-96 -scale-x-[1]">
                   <Image
                     src="/gorilla-clipart-black-and-white-5.png"
@@ -144,36 +144,37 @@ export default function Home({posts}) {
             <Posts posts={posts} />
           </div>
         </section>
+        <section id="contact" className="relative p-5">
+          <div className="max-w-3xl mx-auto bg-zinc-800 text-white z-10 relative dark:bg-zinc-100 dark:text-black p-10">
+            <div className="absolute -top-[18%] -left-[18%] z-1 w-1/3 h-1/3">
+              <Image
+                alt="background image"
+                src="/contact-accent.svg"
+                layout="fill"
+                objectFit="contain"
+                quality={100}
+              />
+            </div>
+            <h2 className="text-5xl font-extrabold uppercase col-start-2 col-span-6 text-center">
+              <span className="font-normal italic">Let&apos;s</span> Work
+              Together
+            </h2>
+            <hr className="w-1/3 mx-auto border-y-2 border-red-600 mb-10 mt-3" />
+            <Contact />
+            <div className="absolute -bottom-[18%] -right-[18%] z-1 w-1/3 h-1/3 rotate-180">
+              <Image
+                alt="background image"
+                src="/contact-accent.svg"
+                layout="fill"
+                objectFit="contain"
+                quality={100}
+              />
+            </div>
+          </div>
+          <div className="h-4/5 w-full absolute left-0 top-1/2 z-0 bg-zinc-400 -skew-y-6 -translate-y-1/2"></div>
+          <Footer />
+        </section>
       </main>
-      <section id="contact" className="relative p-5 w-full">
-        <div className="max-w-3xl mx-auto bg-zinc-800 text-white z-10 relative dark:bg-zinc-100 dark:text-black p-10">
-          <h2 className="text-5xl font-extrabold uppercase col-start-2 col-span-6 text-center">
-            <span className="font-normal italic">Let&apos;s</span> Work Together
-          </h2>
-          <hr className="w-1/3 mx-auto border-y-2 border-red-600 mb-10 mt-3" />
-          <div className="absolute -top-[18%] -left-[18%] z-1 w-1/3 h-1/3">
-            <Image
-              alt="background image"
-              src="/contact-accent.svg"
-              layout="fill"
-              objectFit="contain"
-              quality={100}
-            />
-          </div>
-          <Contact />
-          <div className="absolute -bottom-[18%] -right-[18%] z-1 w-1/3 h-1/3 rotate-180">
-            <Image
-              alt="background image"
-              src="/contact-accent.svg"
-              layout="fill"
-              objectFit="contain"
-              quality={100}
-            />
-          </div>
-        </div>
-        <div className="h-4/5 w-full absolute left-0 top-1/2 z-0 bg-zinc-400 -skew-y-6 -translate-y-1/2"></div>
-        <Footer />
-      </section>
     </>
   );
 }

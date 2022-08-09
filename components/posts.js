@@ -18,10 +18,10 @@ export default function Posts({posts}) {
             alt="Placeholder image"
           />
           <div className="relative">
-            <h3 className="w-full text-2xl font-semibold uppercase text-center transform -translate-y-3 ">
+            <h3 className="w-full text-2xl text-white font-semibold uppercase text-center transform -translate-y-3 ">
               {post.title}
             </h3>
-            <p className="px-5 pb-5">{post.body}</p>
+            <p className="px-5 pb-5 text-white">{post.body}</p>
           </div>
         </li>
       ))}

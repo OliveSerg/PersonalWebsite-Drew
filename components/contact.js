@@ -150,7 +150,7 @@ export default function Contact() {
       </div>
       <div className="col-span-2">
         <button
-          className="block mx-auto w-1/3 py-5 text-2xl font-bold uppercase rounded bg-red-600 hover:text-red-600 hover:outline hover:bg-transparent transition-all"
+          className="block mx-auto w-full md:w-1/3 py-5 text-2xl font-bold uppercase rounded bg-red-600 hover:text-red-600 hover:outline hover:bg-transparent transition-all"
           type="submit"
         >
           Send

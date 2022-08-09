@@ -5,7 +5,7 @@ import Document, {Html, Head, Main, NextScript} from "next/document";
 class ThemeDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html className="overflow-x-hidden">
         <Head>
           <link
             rel="stylesheet"
