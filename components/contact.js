@@ -60,7 +60,7 @@ export default function Contact() {
           placeholder=" "
         />
         <label
-          forHtml="name"
+          htmlFor="name"
           className="absolute text-lg duration-300 transform -translate-y-5 scale-75 top-0 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-600 peer-focus:dark:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-5"
         >
           Name
@@ -84,7 +84,7 @@ export default function Contact() {
           placeholder=" "
         />
         <label
-          forHtml="email"
+          htmlFor="email"
           className="absolute text-lg duration-300 transform -translate-y-5 scale-75 top-0 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-600 peer-focus:dark:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-5"
         >
           Email
@@ -109,7 +109,7 @@ export default function Contact() {
           placeholder=" "
         />
         <label
-          forHtml="phone"
+          htmlFor="phone"
           className="absolute text-lg duration-300 transform -translate-y-5 scale-75 top-0 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-600 peer-focus:dark:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-5"
         >
           Phone
@@ -127,7 +127,7 @@ export default function Contact() {
           placeholder=" "
         />
         <label
-          forHtml="organization"
+          htmlFor="organization"
           className="absolute text-lg duration-300 transform -translate-y-5 scale-75 top-0 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-600 peer-focus:dark:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-5"
         >
           Organization
@@ -142,7 +142,7 @@ export default function Contact() {
           placeholder=" "
         />
         <label
-          forHtml="message"
+          htmlFor="message"
           className="absolute text-lg duration-300 transform -translate-y-5 scale-75 top-0 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-600 peer-focus:dark:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-5"
         >
           Message
